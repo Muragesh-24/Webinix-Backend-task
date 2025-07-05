@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: adminEngigro
+      POSTGRES_PASSWORD: b2Led2k
+      POSTGRES_DB: engigro
+    volumes:
+      - ./container/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - backend
+
+  web:
+    build:
+      context: .
+      dockerfile: ./container/Dockerfile
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+    networks:
+      - backend
+
+  nginx:
+    build:
+      context: .
+      dockerfile: ./container/Dockerfile.nginx
+    ports:
+      - "8041:80"
+    depends_on:
+      - web
+    networks:
+      - backend
+
+
+networks:
+  backend:

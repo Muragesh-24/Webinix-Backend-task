@@ -1,0 +1,11 @@
+# container/Dockerfile.nginx
+
+FROM nginx:alpine
+
+
+COPY wait.sh /wait.sh
+RUN chmod +x /wait.sh
+
+COPY container/nginx.config /etc/nginx/conf.d/default.conf
+
+CMD ["/wait.sh"]
