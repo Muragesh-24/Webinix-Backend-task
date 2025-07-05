@@ -79,11 +79,11 @@ HTML UI (if served): http://localhost/index.html (or open directly from file)
 1. Set up PostgreSQL database
 You need a local PostgreSQL instance with:
 
-database: mydb
+database: engigro<br>
 
-user: user
-
-password: password
+user: adminEngigro<br>
+Port : 5432<br>
+password: b2Led2k<br>
 
 You can adjust values in scripts/db.py.
 
