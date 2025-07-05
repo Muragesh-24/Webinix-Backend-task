@@ -27,31 +27,31 @@ Also includes a clean HTML UI for testing all routes!
 
 ##  Folder Structure
 
-├── callbacks/ # logic functions
-│ └── callfunc.py
+├── callbacks/ # logic functions<br>
+│ └── callfunc.py<br>
 │
-├── container/ # Docker-related files
-│ ├── Dockerfile # FastAPI image build
-│ ├── Dockerfile.nginx # Nginx reverse proxy
-│ ├── nginx.config # Nginx config
-│ └── init.sql # DB initialization
+├── container/ # Docker-related files<br>
+│ ├── Dockerfile # FastAPI image build<br>
+│ ├── Dockerfile.nginx # Nginx reverse proxy<br>
+│ ├── nginx.config # Nginx config<br>
+│ └── init.sql # DB initialization<br>
 │
-├── models/ # SQLAlchemy models
-│ └── task.py
+├── models/ # SQLAlchemy models<br>
+│ └── task.py<br>
 │
-├── routes/ # API route definitions
-│ └── routes.py
+├── routes/ # API route definitions<br>
+│ └── routes.py<br>
 │
-├── scripts/ # Utilities like DB connection
-│ └── db.py
+├── scripts/ # Utilities like DB connection<br>
+│ └── db.py<br>
 │
-├── index.html # Test UI for the API
-├── docker-compose.yml # Run everything together
-├── requirements.txt # Python dependencies
-├── schemas.py # Pydantic schemas (input/output validation)
-├── server.py # Main FastAPI app entry
-├── wait-for-db.sh # Wait for DB before starting FastAPI
-└── README.md # This file
+├── index.html # Test UI for the API<br>
+├── docker-compose.yml # Run everything together<br>
+├── requirements.txt # Python dependencies<br>
+├── schemas.py # Pydantic schemas (input/output validation)<br>
+├── server.py # Main FastAPI app entry<br>
+├── wait-for-db.sh # Wait for DB before starting FastAPI<br>
+└── README.md # This file<br>
 
 
 ---
@@ -67,7 +67,7 @@ Also includes a clean HTML UI for testing all routes!
 
 ```bash
 docker-compose up --build
-
+```
  After running:
 FastAPI will be available at: http://localhost:8041
 
