@@ -75,7 +75,7 @@ FastAPI will be available at: http://localhost:8041
 
 HTML UI (if served): http://localhost/index.html (or open directly from file)
 
-Option 2:  Run Without Docker (Manual Setup)
+### Option 2:  Run Without Docker (Manual Setup)
 1. Set up PostgreSQL database
 You need a local PostgreSQL instance with:
 
@@ -87,31 +87,31 @@ password: password
 
 You can adjust values in scripts/db.py.
 
-pip install -r requirements.txt
+pip install -r requirements.txt<br>
 3. Run FastAPI
 
 uvicorn server:app --reload --port 8041
 
-API Endpoints
-Method	Endpoint	Description
-POST	/tasks	Create new task
-GET	/tasks	Get all tasks
-POST	/tasks/filter	Filter by status
-GET	/tasks/{id}	Get task by ID
-PUT	/tasks/{id}	Update task by ID
-DELETE	/tasks/{id}	Delete task by ID
+API Endpoints<br>
+Method	Endpoint	Description<br>
+POST	/tasks	Create new task<br>
+GET	/tasks	Get all tasks<br>
+POST	/tasks/filter	Filter by status<br>
+GET	/tasks/{id}	Get task by ID<br>
+PUT	/tasks/{id}	Update task by ID<br>
+DELETE	/tasks/{id}	Delete task by ID<br>
 
 🧪 Testing with HTML UI
-Open index.html in your browser. It includes:
+Open index.html in your browser. It includes:<br>
 
-Task creation
+Task creation<br>
 
-Task filtering
+Task filtering<br>
 
-Get, update, delete by ID
+Get, update, delete by ID<br>
 
-JSON results
+JSON results<br>
 
-For production use, the app's efficiency and security can be significantly improved. We can add caching in the frontend to reduce unnecessary API calls and make the user experience faster. Implementing authentication (like JWT) will help verify users and protect your APIs.
+For production use, the app's efficiency and security can be significantly improved. We can add caching in the frontend to reduce unnecessary API calls and make the user experience faster. Implementing authentication (like JWT) will help verify users and protect your APIs.<br>
 
 To improve performance at scale, you can also distribute the load using multiple backend instances behind a load balancer (like Nginx).
